@@ -18,7 +18,7 @@ until tree.dead?
     harvested_oranges << tree.pick_an_orange
   end
 
-  average_orange_diameter = # Need to calculate the average diameter for this harvest.
+  average_orange_diameter = harvested_oranges.reduce { |sum, n| sum + n.diameter }/ harvested_oranges.length
 
   # This is a heredoc, a way to create a formatted multiline string.
   # http://makandracards.com/makandra/1675-using-heredoc-for-prettier-ruby-code
